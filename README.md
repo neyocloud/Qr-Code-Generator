@@ -60,10 +60,19 @@ Docker Hub → Hosts container images for deployment on EKS.
 
 🧱 Running Locally
 🔹 Backend (FastAPI)
+
 git clone https://github.com/neyocloud/devops-qr-code.git
+
+
 cd api
+
+
 python -m venv .venv
+
+
 source .venv/bin/activate
+
+
 pip install -r requirements.txt
 
 
@@ -81,13 +90,20 @@ uvicorn main:app --reload
 
 ➡️ Runs on http://localhost:8000
 
-** 🔹 Frontend (Next.js) **
+** 🔹 Frontend (Next.js)
+
+
 cd front-end-nextjs
+
+
 npm install
+
+
 npm run dev 
 
 
 ➡️ Runs on http://localhost:3000
+
 
 ☁️ Cloud Deployment
 🏗️ Infrastructure (Terraform + EKS)
@@ -125,13 +141,21 @@ aws eks update-kubeconfig --name my-cluster-eks --region us-east-1 --profile dev
 # Challenges & Fixes
 
 
-# Issue	Cause	Solution
+ Issue	Cause	Solution
 
 
 Invalid AWS credentials	CLI not configured	Created IAM user and configured with aws configure
+
+
 Terraform duplicate resources	Same resource names	Renamed subnets and unified provider block
+
+
 Unsupported EKS version (1.27)	Deprecated by AWS	Updated to 1.30
+
+
 ImagePullBackOff	Docker images missing	Rebuilt and pushed latest images
+
+
 Frontend not connecting to backend	Wrong endpoint	Used Kubernetes DNS (qr-api-service:8000)
 
 
