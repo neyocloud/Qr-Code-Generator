@@ -61,7 +61,7 @@ Docker Hub → Hosts container images for deployment on EKS.
 
 
 
-🧱 Running Locally
+# 🧱 Running Locally
 🔹 Backend (FastAPI)
 
 git clone https://github.com/neyocloud/devops-qr-code.git
@@ -108,6 +108,17 @@ npm run dev
 
 
 ➡️ Runs on http://localhost:3000
+
+
+# Continuous Integration & Deployment (CI/CD)
+
+
+<img width="1512" height="982" alt="image" src="https://github.com/user-attachments/assets/750dfa62-b87a-460b-8065-f63af6389e04" />
+
+
+
+This project includes a GitHub Actions pipeline to automate the build and deployment of container images to Docker Hub.
+Every time new code is pushed or merged into the main branch, the workflow runs automatically.
 
 
 # ☁️ Cloud Deployment
