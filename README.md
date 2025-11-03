@@ -27,6 +27,7 @@ To apply real-world DevOps principles — automating infrastructure setup, conta
 <img width="738" height="341" alt="image" src="https://github.com/user-attachments/assets/67e4abec-d408-4aac-97db-5e27b5f8bb9a" />
 
 
+
 🧩 Application Structure
 devops-qr-code/
 │
@@ -34,6 +35,8 @@ devops-qr-code/
 ├── front-end-nextjs/    → Next.js frontend  
 ├── infrastructure/      → Terraform & Kubernetes files  
 └── README.md
+
+
 
 # Architecture Workflow
 
@@ -79,7 +82,9 @@ pip install -r requirements.txt
 Create a .env file and include:
 
 AWS_ACCESS_KEY_ID=<your-access-key>
+
 AWS_SECRET_ACCESS_KEY=<your-secret-key>
+
 BUCKET_NAME=<your-s3-bucket-name>
 
 
@@ -105,7 +110,7 @@ npm run dev
 ➡️ Runs on http://localhost:3000
 
 
-☁️ Cloud Deployment
+# ☁️ Cloud Deployment
 🏗️ Infrastructure (Terraform + EKS)
 
 Terraform provisions:
@@ -123,9 +128,10 @@ terraform validate
 terraform apply
 
 
-Update kubeconfig:
+# Update kubeconfig:
 
 aws eks update-kubeconfig --name my-cluster-eks --region us-east-1 --profile devops
+
 
 # 🚀 Deployment (Kubernetes)
 
@@ -200,6 +206,9 @@ The QR Code Generator project highlights how DevOps transforms a simple app into
 By integrating Docker, Terraform, and Kubernetes, the deployment process became:
 
 ✅ Fully Automated
+
 ✅ Easily Replicable
+
 ✅ Highly Scalable
+
 ✅ Cloud Cost-Efficient
